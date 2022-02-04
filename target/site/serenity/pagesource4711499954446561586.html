@@ -1,0 +1,499 @@
+<html lang='en'><head><link href='prism/prism.css' rel='stylesheet' /></head><body><script src='prism/prism.js'></script><body><div><pre><code class='language-html'>&lt;html lang="en"&gt;<br/>
+ &lt;head&gt; <br/>
+  &lt;meta charset="utf-8"&gt; <br/>
+  &lt;script src="node_modules/core-js/client/shim.min.js"&gt;&lt;/script&gt; &lt;!-- Icons --&gt; <br/>
+  &lt;link href="assets/css/font-awesome.min.css" rel="stylesheet"&gt; <br/>
+  &lt;link href="assets/css/simple-line-icons.css" rel="stylesheet"&gt; <br/>
+  &lt;title&gt;F2X.UI.ModAdministracion&lt;/title&gt; <br/>
+  &lt;base href="/"&gt; <br/>
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt; <br/>
+  &lt;link rel="icon" type="image/x-icon" href="favicon.ico"&gt; <br/>
+  &lt;link rel="stylesheet" href="styles.052e7a6de66c6d056d6e.css"&gt;<br/>
+  &lt;style type="text/css"&gt;/* Chart.js */<br/>
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}&lt;/style&gt;<br/>
+  &lt;style type="text/css"&gt;/* Chart.js */<br/>
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}&lt;/style&gt;<br/>
+  &lt;style&gt;@keyframes spin {<br/>
+      from {transform: rotate(0deg);}<br/>
+      to {transform: rotate(360deg);}<br/>
+    }<br/>
+<br/>
+    [_nghost-c0] {<br/>
+      position:relative;<br/>
+      box-sizing: border-box;<br/>
+      display:inline-block;<br/>
+      padding:0px;<br/>
+      border-radius:100%;<br/>
+      border-style:solid;<br/>
+      animation: spin 0.8s linear infinite;<br/>
+    }<br/>
+<br/>
+    [_nghost-c0]   .margins[_ngcontent-c0] {<br/>
+        margin: 0px 10px;<br/>
+    }&lt;/style&gt;<br/>
+  &lt;script charset="utf-8" src="5.f0d995070e4fb715f2a5.js"&gt;&lt;/script&gt;<br/>
+  &lt;style&gt;.ngx-datatable{display:block;overflow:hidden;justify-content:center;position:relative;-webkit-transform:translate3d(0,0,0)}.ngx-datatable [hidden]{display:none!important}.ngx-datatable *,.ngx-datatable :after,.ngx-datatable :before{box-sizing:border-box}.ngx-datatable.scroll-vertical .datatable-body{overflow-y:auto}.ngx-datatable.scroll-vertical .datatable-body .datatable-row-wrapper{position:absolute}.ngx-datatable.scroll-horz .datatable-body{overflow-x:auto;-webkit-overflow-scrolling:touch}.ngx-datatable.fixed-header .datatable-header .datatable-header-inner{white-space:nowrap}.ngx-datatable.fixed-header .datatable-header .datatable-header-inner .datatable-header-cell{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ngx-datatable.fixed-row .datatable-scroll,.ngx-datatable.fixed-row .datatable-scroll .datatable-body-row{white-space:nowrap}.ngx-datatable.fixed-row .datatable-scroll .datatable-body-row .datatable-body-cell,.ngx-datatable.fixed-row .datatable-scroll .datatable-body-row .datatable-body-group-cell{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.ngx-datatable .datatable-body-row,.ngx-datatable .datatable-header-inner,.ngx-datatable .datatable-row-center{display:flex;flex-direction:row;-o-flex-flow:row;flex-flow:row}.ngx-datatable .datatable-body-cell,.ngx-datatable .datatable-header-cell{overflow-x:hidden;vertical-align:top;display:inline-block;line-height:1.625}.ngx-datatable .datatable-body-cell:focus,.ngx-datatable .datatable-header-cell:focus{outline:0}.ngx-datatable .datatable-row-left,.ngx-datatable .datatable-row-right{z-index:9}.ngx-datatable .datatable-row-center,.ngx-datatable .datatable-row-group,.ngx-datatable .datatable-row-left,.ngx-datatable .datatable-row-right{position:relative}.ngx-datatable .datatable-header{display:block;overflow:hidden}.ngx-datatable .datatable-header .datatable-header-inner{align-items:stretch;-webkit-align-items:stretch}.ngx-datatable .datatable-header .datatable-header-cell{position:relative;display:inline-block}.ngx-datatable .datatable-header .datatable-header-cell.sortable .datatable-header-cell-wrapper{cursor:pointer}.ngx-datatable .datatable-header .datatable-header-cell.longpress .datatable-header-cell-wrapper{cursor:move}.ngx-datatable .datatable-header .datatable-header-cell .sort-btn{line-height:100%;vertical-align:middle;display:inline-block;cursor:pointer}.ngx-datatable .datatable-header .datatable-header-cell .resize-handle,.ngx-datatable .datatable-header .datatable-header-cell .resize-handle--not-resizable{display:inline-block;position:absolute;right:0;top:0;bottom:0;width:5px;padding:0 4px;visibility:hidden}.ngx-datatable .datatable-header .datatable-header-cell .resize-handle{cursor:ew-resize}.ngx-datatable .datatable-header .datatable-header-cell.resizeable:hover .resize-handle,.ngx-datatable .datatable-header .datatable-header-cell:hover .resize-handle--not-resizable{visibility:visible}.ngx-datatable .datatable-header .datatable-header-cell .targetMarker{position:absolute;top:0;bottom:0}.ngx-datatable .datatable-header .datatable-header-cell .targetMarker.dragFromLeft{right:0}.ngx-datatable .datatable-header .datatable-header-cell .targetMarker.dragFromRight{left:0}.ngx-datatable .datatable-header .datatable-header-cell .datatable-header-cell-template-wrap{height:inherit}.ngx-datatable .datatable-body{position:relative;z-index:10;display:block}.ngx-datatable .datatable-body .datatable-scroll{display:inline-block}.ngx-datatable .datatable-body .datatable-row-detail{overflow-y:hidden}.ngx-datatable .datatable-body .datatable-row-wrapper{display:flex;flex-direction:column}.ngx-datatable .datatable-body .datatable-body-row{outline:0}.ngx-datatable .datatable-body .datatable-body-row&gt;div{display:flex}.ngx-datatable .datatable-footer{display:block;width:100%}.ngx-datatable .datatable-footer .datatable-footer-inner{display:flex;align-items:center;width:100%}.ngx-datatable .datatable-footer .selected-count .page-count{flex:1 1 40%}.ngx-datatable .datatable-footer .selected-count .datatable-pager{flex:1 1 60%}.ngx-datatable .datatable-footer .page-count{flex:1 1 20%}.ngx-datatable .datatable-footer .datatable-pager{flex:1 1 80%;text-align:right}.ngx-datatable .datatable-footer .datatable-pager .pager,.ngx-datatable .datatable-footer .datatable-pager .pager li{padding:0;margin:0;display:inline-block;list-style:none}.ngx-datatable .datatable-footer .datatable-pager .pager li,.ngx-datatable .datatable-footer .datatable-pager .pager li a{outline:0}.ngx-datatable .datatable-footer .datatable-pager .pager li a{cursor:pointer;display:inline-block}.ngx-datatable .datatable-footer .datatable-pager .pager li.disabled a{cursor:not-allowed}&lt;/style&gt;<br/>
+ &lt;/head&gt; <br/>
+ &lt;body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden" ng-version="6.1.9" style="padding-right: 0px;"&gt;<br/>
+  &lt;router-outlet&gt;&lt;/router-outlet&gt;&lt;app-dashboard&gt;<br/>
+   &lt;header class="app-header navbar"&gt;<br/>
+    &lt;button appmobilesidebartoggler="" class="navbar-toggler d-lg-none" type="button"&gt;☰&lt;/button&gt;&lt;a class="navbar-brand" href="#/home"&gt;&lt;/a&gt;<br/>
+    &lt;ul class="nav navbar-nav d-md-down-none"&gt;<br/>
+     &lt;li class="nav-item"&gt;&lt;a appsidebartoggler="" class="nav-link navbar-toggler" href="#"&gt;☰&lt;/a&gt;&lt;/li&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+    &lt;/ul&gt;<br/>
+    &lt;ul class="nav navbar-nav ml-auto"&gt;<br/>
+     &lt;li class="nav-item px-2 text-muted" style="border-right: 1px solid #b0bec5"&gt;&lt;i class="fa fa-institution"&gt;&lt;/i&gt;&lt;span class="d-md-down-none"&gt;Concesión Sta Marta Paraguachón&nbsp;&lt;/span&gt;&lt;/li&gt;&nbsp; <br/>
+     &lt;li class="nav-item px-2 dropdown" dropdown=""&gt;&lt;a class="nav-link dropdown-toggle" dropdowntoggle="" href="" aria-haspopup="true"&gt;&lt;i class="fa fa-user"&gt;&lt;/i&gt;&lt;span class="d-md-down-none"&gt;F2XOL&lt;/span&gt;&lt;/a&gt;&lt;!----&gt;&lt;/li&gt;<br/>
+     &lt;li class="nav-item d-md-down-none"&gt;&lt;a appasidemenutoggler="" class="nav-link navbar-toggler" href="#"&gt;☰&lt;/a&gt;&lt;/li&gt;<br/>
+    &lt;/ul&gt;<br/>
+   &lt;/header&gt;<br/>
+   &lt;div class="app-body"&gt;<br/>
+    &lt;div class="sidebar"&gt;<br/>
+     &lt;nav class="sidebar-nav"&gt;<br/>
+      &lt;ul class="nav"&gt;<br/>
+       &lt;!----&gt;<br/>
+       &lt;li class="divider"&gt;&lt;/li&gt;&lt;!----&gt;<br/>
+       &lt;li class="nav-item"&gt;&lt;a class="nav-link" routerlinkactive="active" href="#/home/screens/empresas"&gt;&lt;i class="icon-globe"&gt;&lt;/i&gt; Empresas&lt;/a&gt;&lt;/li&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+       &lt;li class="nav-item"&gt;&lt;a class="nav-link active" routerlinkactive="active" href="#/home/screens/sesiones"&gt;&lt;i class="icon-login"&gt;&lt;/i&gt; Sesiones&lt;/a&gt;&lt;/li&gt;&lt;!----&gt;<br/>
+       &lt;li appnavdropdown="" class="nav-item nav-dropdown" routerlinkactive="open"&gt;&lt;a appnavdropdowntoggle="" class="nav-link nav-dropdown-toggle" href="#"&gt;&lt;i class="icon-graph"&gt;&lt;/i&gt; Informes&lt;/a&gt;<br/>
+        &lt;ul class="nav-dropdown-items"&gt;<br/>
+         &lt;!----&gt;<br/>
+         &lt;li class="nav-item"&gt;&lt;a class="nav-link" routerlinkactive="active" href="#/home/screens/reporteLogUsuarios"&gt;&lt;i class="icon-chart"&gt;&lt;/i&gt;Reporte Log Usuarios&lt;/a&gt;&lt;/li&gt;<br/>
+        &lt;/ul&gt;&lt;/li&gt;<br/>
+      &lt;/ul&gt;<br/>
+     &lt;/nav&gt;<br/>
+    &lt;/div&gt;<br/>
+    &lt;main class="main"&gt;<br/>
+     &lt;div class="container-fluid" style="padding-top: 8px; border-top: 3px solid rgb(199, 0, 57);"&gt;<br/>
+      &lt;router-outlet&gt;&lt;/router-outlet&gt;&lt;lista-sesiones&gt;<br/>
+       &lt;h6&gt; Listado de Sesiones &lt;/h6&gt;<br/>
+       &lt;hr&gt;<br/>
+       &lt;sesiones&gt;<br/>
+        &lt;div class="card"&gt;<br/>
+         &lt;div class="card-header card-info py-2" style="background-color:#ABB0B2;"&gt;<br/>
+          &lt;div class="row"&gt;<br/>
+           &lt;div class="col-lg-8"&gt;<br/>
+            &lt;barraacciones&gt;<br/>
+             &lt;div class="btn-group"&gt;<br/>
+              &lt;!----&gt;<br/>
+              &lt;div class="verticalLine"&gt;&lt;/div&gt;&lt;button class="btn btn-m m-0 btn-success" title="Refrescar" type="button"&gt;&lt;i class="icon-refresh"&gt;&lt;/i&gt;&lt;/button&gt;<br/>
+              &lt;div class="verticalLine"&gt;&lt;/div&gt;&lt;!----&gt;&lt;button class="btn btn-m m-0 btn-warning" title="Exportar a excel" type="button"&gt;&lt;i class="fa fa-file-excel-o"&gt;&lt;/i&gt;&lt;/button&gt;<br/>
+              &lt;div class="verticalLine"&gt;&lt;/div&gt;&lt;!----&gt;<br/>
+              &lt;div class="btn-group" dropdown=""&gt;<br/>
+               &lt;button class="btn btn-m m-0 btn-primary" type="button"&gt;Acciones&lt;/button&gt;&lt;button class="btn btn-m m-0 btn-primary dropdown-toggle dropdown-toggle-split" dropdowntoggle="" type="button" aria-haspopup="true" aria-expanded="false"&gt;&lt;span class="caret"&gt;&lt;/span&gt;&lt;span class="sr-only"&gt;Split button!&lt;/span&gt;&lt;/button&gt;&lt;!----&gt;<br/>
+               &lt;ul class="dropdown-menu" role="menu" style="left: 0px; right: auto;"&gt;<br/>
+                &lt;!----&gt;<br/>
+                &lt;li&gt;&lt;button class="dropdown-item"&gt;&lt;i class="icons icon-logout font-lg text-info"&gt;&lt;/i&gt;Anular sesión de usuario &lt;/button&gt;&lt;/li&gt;<br/>
+               &lt;/ul&gt;<br/>
+              &lt;/div&gt;&lt;!----&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/barraacciones&gt;<br/>
+           &lt;/div&gt;<br/>
+           &lt;div class="col-lg-4"&gt;<br/>
+            &lt;input class="form-control" placeholder="Filtro por Código Usuario" type="text"&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+         &lt;div&gt;<br/>
+          &lt;ngx-datatable class="custom ngx-datatable fixed-header selectable checkbox-selection"&gt;<br/>
+           &lt;div visibilityobserver="" class="visible"&gt;<br/>
+            &lt;!----&gt;&lt;datatable-header class="datatable-header" style="height: 50px; width: 100%;"&gt;<br/>
+             &lt;div class="datatable-header-inner" orderable="" style="width: 772px;"&gt;<br/>
+              &lt;!----&gt;<br/>
+              &lt;div class="datatable-row-left" style="width: 0px;"&gt;<br/>
+               &lt;!----&gt;<br/>
+              &lt;/div&gt;<br/>
+              &lt;div class="datatable-row-center" style="width: 772px; backface-visibility: hidden; transform: translate3d(0px, 0px, 0px);"&gt;<br/>
+               &lt;!----&gt;&lt;datatable-header-cell class="datatable-header-cell" draggable="" long-press="" resizeable="" style="width: 30px;"&gt;<br/>
+                &lt;div class="datatable-header-cell-template-wrap"&gt;<br/>
+                 &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+                 &lt;input type="checkbox" checked="false"&gt;&lt;!----&gt;&lt;span class="sort-btn"&gt;&lt;/span&gt;<br/>
+                &lt;/div&gt;<br/>
+                &lt;span class="resize-handle--not-resizable"&gt;&lt;/span&gt;<br/>
+               &lt;/datatable-header-cell&gt;&lt;datatable-header-cell class="datatable-header-cell sortable resizeable" draggable="" long-press="" resizeable="" style="width: 247.333px;"&gt;<br/>
+                &lt;div class="datatable-header-cell-template-wrap"&gt;<br/>
+                 &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;span&gt;Código Usuario&lt;/span&gt;&lt;!----&gt;&lt;span class="sort-btn"&gt;&lt;/span&gt;<br/>
+                &lt;/div&gt;<br/>
+                &lt;span class="resize-handle"&gt;&lt;/span&gt;<br/>
+               &lt;/datatable-header-cell&gt;&lt;datatable-header-cell class="datatable-header-cell sortable resizeable" draggable="" long-press="" resizeable="" style="width: 247.333px;"&gt;<br/>
+                &lt;div class="datatable-header-cell-template-wrap"&gt;<br/>
+                 &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;span&gt;Fecha Inicio&lt;/span&gt;&lt;!----&gt;&lt;span class="sort-btn"&gt;&lt;/span&gt;<br/>
+                &lt;/div&gt;<br/>
+                &lt;span class="resize-handle"&gt;&lt;/span&gt;<br/>
+               &lt;/datatable-header-cell&gt;&lt;datatable-header-cell class="datatable-header-cell sortable resizeable" draggable="" long-press="" resizeable="" style="width: 247.333px;"&gt;<br/>
+                &lt;div class="datatable-header-cell-template-wrap"&gt;<br/>
+                 &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;span&gt;Ip&lt;/span&gt;&lt;!----&gt;&lt;span class="sort-btn"&gt;&lt;/span&gt;<br/>
+                &lt;/div&gt;<br/>
+                &lt;span class="resize-handle"&gt;&lt;/span&gt;<br/>
+               &lt;/datatable-header-cell&gt;<br/>
+              &lt;/div&gt;<br/>
+              &lt;div class="datatable-row-right" style="width: 0px; transform: translate3d(0px, 0px, 0px); backface-visibility: hidden;"&gt;<br/>
+               &lt;!----&gt;<br/>
+              &lt;/div&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/datatable-header&gt;&lt;datatable-body class="datatable-body" style="width: 100%; height: auto;"&gt;<br/>
+             &lt;datatable-selection&gt;<br/>
+              &lt;!----&gt;&lt;!----&gt;<br/>
+              &lt;datatable-scroller class="datatable-scroll" style="width: 772px;"&gt;<br/>
+               &lt;!----&gt;&lt;!----&gt;<br/>
+               &lt;datatable-row-wrapper class="datatable-row-wrapper"&gt;<br/>
+                &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+                &lt;datatable-body-row tabindex="-1" class="datatable-body-row datatable-row-even" style="width: 772px;"&gt;<br/>
+                 &lt;!----&gt;<br/>
+                 &lt;div class="datatable-row-left datatable-row-group" style="width: 0px; transform: translate3d(0px, 0px, 0px); backface-visibility: hidden;"&gt;<br/>
+                  &lt;!----&gt;<br/>
+                 &lt;/div&gt;<br/>
+                 &lt;div class="datatable-row-center datatable-row-group" style="width: 772px;"&gt;<br/>
+                  &lt;!----&gt;&lt;datatable-body-cell tabindex="-1" class="datatable-body-cell sort-active" style="width: 30px; height: auto;"&gt;<br/>
+                   &lt;div class="datatable-body-cell-label"&gt;<br/>
+                    &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+                    &lt;input type="checkbox"&gt;&lt;!----&gt;<br/>
+                   &lt;/div&gt;<br/>
+                  &lt;/datatable-body-cell&gt;&lt;datatable-body-cell tabindex="-1" class="datatable-body-cell sort-active" style="width: 247.333px; height: auto;"&gt;<br/>
+                   &lt;div class="datatable-body-cell-label"&gt;<br/>
+                    &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt; ajtc &lt;!----&gt;<br/>
+                   &lt;/div&gt;<br/>
+                  &lt;/datatable-body-cell&gt;&lt;datatable-body-cell tabindex="-1" class="datatable-body-cell sort-active" style="width: 247.333px; height: auto;"&gt;<br/>
+                   &lt;div class="datatable-body-cell-label"&gt;<br/>
+                    &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt; 13/12/2018 14:55:57 &lt;!----&gt;<br/>
+                   &lt;/div&gt;<br/>
+                  &lt;/datatable-body-cell&gt;&lt;datatable-body-cell tabindex="-1" class="datatable-body-cell sort-active" style="width: 247.333px; height: auto;"&gt;<br/>
+                   &lt;div class="datatable-body-cell-label"&gt;<br/>
+                    &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt; 192.75.185.94 &lt;!----&gt;<br/>
+                   &lt;/div&gt;<br/>
+                  &lt;/datatable-body-cell&gt;<br/>
+                 &lt;/div&gt;<br/>
+                 &lt;div class="datatable-row-right datatable-row-group" style="width: 0px; transform: translate3d(-17px, 0px, 0px); backface-visibility: hidden;"&gt;<br/>
+                  &lt;!----&gt;<br/>
+                 &lt;/div&gt;<br/>
+                &lt;/datatable-body-row&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+               &lt;/datatable-row-wrapper&gt;<br/>
+               &lt;datatable-row-wrapper class="datatable-row-wrapper"&gt;<br/>
+                &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+                &lt;datatable-body-row tabindex="-1" class="datatable-body-row datatable-row-odd" style="width: 772px;"&gt;<br/>
+                 &lt;!----&gt;<br/>
+                 &lt;div class="datatable-row-left datatable-row-group" style="width: 0px; transform: translate3d(0px, 0px, 0px); backface-visibility: hidden;"&gt;<br/>
+                  &lt;!----&gt;<br/>
+                 &lt;/div&gt;<br/>
+                 &lt;div class="datatable-row-center datatable-row-group" style="width: 772px;"&gt;<br/>
+                  &lt;!----&gt;&lt;datatable-body-cell tabindex="-1" class="datatable-body-cell sort-active" style="width: 30px; height: auto;"&gt;<br/>
+                   &lt;div class="datatable-body-cell-label"&gt;<br/>
+                    &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+                    &lt;input type="checkbox"&gt;&lt;!----&gt;<br/>
+                   &lt;/div&gt;<br/>
+                  &lt;/datatable-body-cell&gt;&lt;datatable-body-cell tabindex="-1" class="datatable-body-cell sort-active" style="width: 247.333px; height: auto;"&gt;<br/>
+                   &lt;div class="datatable-body-cell-label"&gt;<br/>
+                    &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt; adg &lt;!----&gt;<br/>
+                   &lt;/div&gt;<br/>
+                  &lt;/datatable-body-cell&gt;&lt;datatable-body-cell tabindex="-1" class="datatable-body-cell sort-active" style="width: 247.333px; height: auto;"&gt;<br/>
+                   &lt;div class="datatable-body-cell-label"&gt;<br/>
+                    &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt; 28/1/2019 08:46:54 &lt;!----&gt;<br/>
+                   &lt;/div&gt;<br/>
+                  &lt;/datatable-body-cell&gt;&lt;datatable-body-cell tabindex="-1" class="datatable-body-cell sort-active" style="width: 247.333px; height: auto;"&gt;<br/>
+                   &lt;div class="datatable-body-cell-label"&gt;<br/>
+                    &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt; 192.75.185.94 &lt;!----&gt;<br/>
+                   &lt;/div&gt;<br/>
+                  &lt;/datatable-body-cell&gt;<br/>
+                 &lt;/div&gt;<br/>
+                 &lt;div class="datatable-row-right datatable-row-group" style="width: 0px; transform: translate3d(-17px, 0px, 0px); backface-visibility: hidden;"&gt;<br/>
+                  &lt;!----&gt;<br/>
+                 &lt;/div&gt;<br/>
+                &lt;/datatable-body-row&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+               &lt;/datatable-row-wrapper&gt;<br/>
+               &lt;datatable-row-wrapper class="datatable-row-wrapper"&gt;<br/>
+                &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+                &lt;datatable-body-row tabindex="-1" class="datatable-body-row datatable-row-even" style="width: 772px;"&gt;<br/>
+                 &lt;!----&gt;<br/>
+                 &lt;div class="datatable-row-left datatable-row-group" style="width: 0px; transform: translate3d(0px, 0px, 0px); backface-visibility: hidden;"&gt;<br/>
+                  &lt;!----&gt;<br/>
+                 &lt;/div&gt;<br/>
+                 &lt;div class="datatable-row-center datatable-row-group" style="width: 772px;"&gt;<br/>
+                  &lt;!----&gt;&lt;datatable-body-cell tabindex="-1" class="datatable-body-cell sort-active" style="width: 30px; height: auto;"&gt;<br/>
+                   &lt;div class="datatable-body-cell-label"&gt;<br/>
+                    &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+                    &lt;input type="checkbox"&gt;&lt;!----&gt;<br/>
+                   &lt;/div&gt;<br/>
+                  &lt;/datatable-body-cell&gt;&lt;datatable-body-cell tabindex="-1" class="datatable-body-cell sort-active" style="width: 247.333px; height: auto;"&gt;<br/>
+                   &lt;div class="datatable-body-cell-label"&gt;<br/>
+                    &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt; ljmd &lt;!----&gt;<br/>
+                   &lt;/div&gt;<br/>
+                  &lt;/datatable-body-cell&gt;&lt;datatable-body-cell tabindex="-1" class="datatable-body-cell sort-active" style="width: 247.333px; height: auto;"&gt;<br/>
+                   &lt;div class="datatable-body-cell-label"&gt;<br/>
+                    &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt; 16/1/2020 06:22:53 &lt;!----&gt;<br/>
+                   &lt;/div&gt;<br/>
+                  &lt;/datatable-body-cell&gt;&lt;datatable-body-cell tabindex="-1" class="datatable-body-cell sort-active" style="width: 247.333px; height: auto;"&gt;<br/>
+                   &lt;div class="datatable-body-cell-label"&gt;<br/>
+                    &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt; 192.75.185.94 &lt;!----&gt;<br/>
+                   &lt;/div&gt;<br/>
+                  &lt;/datatable-body-cell&gt;<br/>
+                 &lt;/div&gt;<br/>
+                 &lt;div class="datatable-row-right datatable-row-group" style="width: 0px; transform: translate3d(-17px, 0px, 0px); backface-visibility: hidden;"&gt;<br/>
+                  &lt;!----&gt;<br/>
+                 &lt;/div&gt;<br/>
+                &lt;/datatable-body-row&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+               &lt;/datatable-row-wrapper&gt;<br/>
+               &lt;datatable-row-wrapper class="datatable-row-wrapper"&gt;<br/>
+                &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+                &lt;datatable-body-row tabindex="-1" class="datatable-body-row datatable-row-odd" style="width: 772px;"&gt;<br/>
+                 &lt;!----&gt;<br/>
+                 &lt;div class="datatable-row-left datatable-row-group" style="width: 0px; transform: translate3d(0px, 0px, 0px); backface-visibility: hidden;"&gt;<br/>
+                  &lt;!----&gt;<br/>
+                 &lt;/div&gt;<br/>
+                 &lt;div class="datatable-row-center datatable-row-group" style="width: 772px;"&gt;<br/>
+                  &lt;!----&gt;&lt;datatable-body-cell tabindex="-1" class="datatable-body-cell sort-active" style="width: 30px; height: auto;"&gt;<br/>
+                   &lt;div class="datatable-body-cell-label"&gt;<br/>
+                    &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+                    &lt;input type="checkbox"&gt;&lt;!----&gt;<br/>
+                   &lt;/div&gt;<br/>
+                  &lt;/datatable-body-cell&gt;&lt;datatable-body-cell tabindex="-1" class="datatable-body-cell sort-active" style="width: 247.333px; height: auto;"&gt;<br/>
+                   &lt;div class="datatable-body-cell-label"&gt;<br/>
+                    &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt; crl &lt;!----&gt;<br/>
+                   &lt;/div&gt;<br/>
+                  &lt;/datatable-body-cell&gt;&lt;datatable-body-cell tabindex="-1" class="datatable-body-cell sort-active" style="width: 247.333px; height: auto;"&gt;<br/>
+                   &lt;div class="datatable-body-cell-label"&gt;<br/>
+                    &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt; 15/1/2020 17:21:38 &lt;!----&gt;<br/>
+                   &lt;/div&gt;<br/>
+                  &lt;/datatable-body-cell&gt;&lt;datatable-body-cell tabindex="-1" class="datatable-body-cell sort-active" style="width: 247.333px; height: auto;"&gt;<br/>
+                   &lt;div class="datatable-body-cell-label"&gt;<br/>
+                    &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt; 192.75.185.94 &lt;!----&gt;<br/>
+                   &lt;/div&gt;<br/>
+                  &lt;/datatable-body-cell&gt;<br/>
+                 &lt;/div&gt;<br/>
+                 &lt;div class="datatable-row-right datatable-row-group" style="width: 0px; transform: translate3d(-17px, 0px, 0px); backface-visibility: hidden;"&gt;<br/>
+                  &lt;!----&gt;<br/>
+                 &lt;/div&gt;<br/>
+                &lt;/datatable-body-row&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+               &lt;/datatable-row-wrapper&gt;<br/>
+               &lt;datatable-row-wrapper class="datatable-row-wrapper"&gt;<br/>
+                &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+                &lt;datatable-body-row tabindex="-1" class="datatable-body-row datatable-row-even" style="width: 772px;"&gt;<br/>
+                 &lt;!----&gt;<br/>
+                 &lt;div class="datatable-row-left datatable-row-group" style="width: 0px; transform: translate3d(0px, 0px, 0px); backface-visibility: hidden;"&gt;<br/>
+                  &lt;!----&gt;<br/>
+                 &lt;/div&gt;<br/>
+                 &lt;div class="datatable-row-center datatable-row-group" style="width: 772px;"&gt;<br/>
+                  &lt;!----&gt;&lt;datatable-body-cell tabindex="-1" class="datatable-body-cell sort-active" style="width: 30px; height: auto;"&gt;<br/>
+                   &lt;div class="datatable-body-cell-label"&gt;<br/>
+                    &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+                    &lt;input type="checkbox"&gt;&lt;!----&gt;<br/>
+                   &lt;/div&gt;<br/>
+                  &lt;/datatable-body-cell&gt;&lt;datatable-body-cell tabindex="-1" class="datatable-body-cell sort-active" style="width: 247.333px; height: auto;"&gt;<br/>
+                   &lt;div class="datatable-body-cell-label"&gt;<br/>
+                    &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt; f2xgg &lt;!----&gt;<br/>
+                   &lt;/div&gt;<br/>
+                  &lt;/datatable-body-cell&gt;&lt;datatable-body-cell tabindex="-1" class="datatable-body-cell sort-active" style="width: 247.333px; height: auto;"&gt;<br/>
+                   &lt;div class="datatable-body-cell-label"&gt;<br/>
+                    &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt; 25/1/2022 08:46:56 &lt;!----&gt;<br/>
+                   &lt;/div&gt;<br/>
+                  &lt;/datatable-body-cell&gt;&lt;datatable-body-cell tabindex="-1" class="datatable-body-cell sort-active" style="width: 247.333px; height: auto;"&gt;<br/>
+                   &lt;div class="datatable-body-cell-label"&gt;<br/>
+                    &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt; 10.0.0.4 &lt;!----&gt;<br/>
+                   &lt;/div&gt;<br/>
+                  &lt;/datatable-body-cell&gt;<br/>
+                 &lt;/div&gt;<br/>
+                 &lt;div class="datatable-row-right datatable-row-group" style="width: 0px; transform: translate3d(-17px, 0px, 0px); backface-visibility: hidden;"&gt;<br/>
+                  &lt;!----&gt;<br/>
+                 &lt;/div&gt;<br/>
+                &lt;/datatable-body-row&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+               &lt;/datatable-row-wrapper&gt;<br/>
+               &lt;datatable-row-wrapper class="datatable-row-wrapper"&gt;<br/>
+                &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+                &lt;datatable-body-row tabindex="-1" class="datatable-body-row datatable-row-odd" style="width: 772px;"&gt;<br/>
+                 &lt;!----&gt;<br/>
+                 &lt;div class="datatable-row-left datatable-row-group" style="width: 0px; transform: translate3d(0px, 0px, 0px); backface-visibility: hidden;"&gt;<br/>
+                  &lt;!----&gt;<br/>
+                 &lt;/div&gt;<br/>
+                 &lt;div class="datatable-row-center datatable-row-group" style="width: 772px;"&gt;<br/>
+                  &lt;!----&gt;&lt;datatable-body-cell tabindex="-1" class="datatable-body-cell sort-active" style="width: 30px; height: auto;"&gt;<br/>
+                   &lt;div class="datatable-body-cell-label"&gt;<br/>
+                    &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+                    &lt;input type="checkbox"&gt;&lt;!----&gt;<br/>
+                   &lt;/div&gt;<br/>
+                  &lt;/datatable-body-cell&gt;&lt;datatable-body-cell tabindex="-1" class="datatable-body-cell sort-active" style="width: 247.333px; height: auto;"&gt;<br/>
+                   &lt;div class="datatable-body-cell-label"&gt;<br/>
+                    &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt; F2XOL &lt;!----&gt;<br/>
+                   &lt;/div&gt;<br/>
+                  &lt;/datatable-body-cell&gt;&lt;datatable-body-cell tabindex="-1" class="datatable-body-cell sort-active" style="width: 247.333px; height: auto;"&gt;<br/>
+                   &lt;div class="datatable-body-cell-label"&gt;<br/>
+                    &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt; 3/2/2022 22:04:12 &lt;!----&gt;<br/>
+                   &lt;/div&gt;<br/>
+                  &lt;/datatable-body-cell&gt;&lt;datatable-body-cell tabindex="-1" class="datatable-body-cell sort-active" style="width: 247.333px; height: auto;"&gt;<br/>
+                   &lt;div class="datatable-body-cell-label"&gt;<br/>
+                    &lt;!----&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt; 10.0.0.4 &lt;!----&gt;<br/>
+                   &lt;/div&gt;<br/>
+                  &lt;/datatable-body-cell&gt;<br/>
+                 &lt;/div&gt;<br/>
+                 &lt;div class="datatable-row-right datatable-row-group" style="width: 0px; transform: translate3d(-17px, 0px, 0px); backface-visibility: hidden;"&gt;<br/>
+                  &lt;!----&gt;<br/>
+                 &lt;/div&gt;<br/>
+                &lt;/datatable-body-row&gt;&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;<br/>
+               &lt;/datatable-row-wrapper&gt;&lt;!----&gt;<br/>
+              &lt;/datatable-scroller&gt;&lt;!----&gt;<br/>
+             &lt;/datatable-selection&gt;<br/>
+            &lt;/datatable-body&gt;&lt;!----&gt;&lt;datatable-footer class="datatable-footer"&gt;<br/>
+             &lt;div class="datatable-footer-inner selected-count" style="height: 50px;"&gt;<br/>
+              &lt;!----&gt;&lt;!----&gt;<br/>
+              &lt;div class="page-count"&gt;<br/>
+               &lt;!----&gt;&lt;span&gt; 0 selected / &lt;/span&gt; 6 total <br/>
+              &lt;/div&gt;&lt;!----&gt;&lt;datatable-pager class="datatable-pager" hidden&gt;<br/>
+               &lt;ul class="pager"&gt;<br/>
+                &lt;li class="disabled"&gt;&lt;a aria-label="go to first page" href="javascript:void(0)" role="button"&gt;&lt;i class="datatable-icon-prev"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;<br/>
+                &lt;li class="disabled"&gt;&lt;a aria-label="go to previous page" href="javascript:void(0)" role="button"&gt;&lt;i class="datatable-icon-left"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;&lt;!----&gt;<br/>
+                &lt;li class="pages active" role="button" aria-label="page 1"&gt;&lt;a href="javascript:void(0)"&gt; 1 &lt;/a&gt;&lt;/li&gt;<br/>
+                &lt;li class="disabled"&gt;&lt;a aria-label="go to next page" href="javascript:void(0)" role="button"&gt;&lt;i class="datatable-icon-right"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;<br/>
+                &lt;li class="disabled"&gt;&lt;a aria-label="go to last page" href="javascript:void(0)" role="button"&gt;&lt;i class="datatable-icon-skip"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;<br/>
+               &lt;/ul&gt;<br/>
+              &lt;/datatable-pager&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/datatable-footer&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/ngx-datatable&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/div&gt;<br/>
+        &lt;accionmodal&gt;<br/>
+         &lt;div aria-hidden="true" aria-labelledby="myModalLabel" bsmodal="" class="modal fade" role="dialog" tabindex="-1" aria-modal="true" style="display: none;"&gt;<br/>
+          &lt;div role="document" class="modal-dialog modal-warning "&gt;<br/>
+           &lt;div class="modal-content"&gt;<br/>
+            &lt;div class="modal-header"&gt;<br/>
+             &lt;h4 class="modal-title"&gt;Anular Sesión&lt;/h4&gt;&lt;button aria-label="Close" class="close" type="button"&gt;&lt;span aria-hidden="true"&gt;×&lt;/span&gt;&lt;/button&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div class="modal-body"&gt;<br/>
+             &lt;p&gt;¿Esta seguro de terminar la sesión del usuario 'ajtc'?&lt;/p&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div class="modal-footer"&gt;<br/>
+             &lt;!----&gt;&lt;button class="btn btn-secondary" type="button"&gt;Cancelar&lt;/button&gt;&lt;button type="button" class="btn btn-warning"&gt;Aceptar&lt;/button&gt;<br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/accionmodal&gt;<br/>
+        &lt;mensajemodal&gt;<br/>
+         &lt;div aria-hidden="false" aria-labelledby="myModalLabel" bsmodal="" class="modal fade in show" role="dialog" tabindex="-1" aria-modal="true" style="display: block;"&gt;<br/>
+          &lt;div role="document" class="modal-dialog modal-danger"&gt;<br/>
+           &lt;div class="modal-content"&gt;<br/>
+            &lt;div class="modal-header"&gt;<br/>
+             &lt;h4 class="modal-title"&gt;Respuesta&lt;/h4&gt;&lt;button aria-label="Close" class="close" type="button"&gt;&lt;span aria-hidden="true"&gt;×&lt;/span&gt;&lt;/button&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div class="modal-body"&gt;<br/>
+             &lt;span&gt;No puede anular la sesión de un Usuario con un nivel mayor al propio&lt;/span&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div class="modal-footer"&gt;<br/>
+             &lt;button class="btn btn-secondary" type="button"&gt;Ok&lt;/button&gt;<br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/mensajemodal&gt;<br/>
+       &lt;/sesiones&gt;<br/>
+      &lt;/lista-sesiones&gt;<br/>
+     &lt;/div&gt;<br/>
+    &lt;/main&gt;<br/>
+    &lt;aside class="aside-menu"&gt;<br/>
+     &lt;div class="callout m-0 py-2 text-muted text-center bg-faded text-uppercase"&gt;<br/>
+      &lt;small&gt;&lt;b&gt;Mis Modulos&lt;/b&gt;&lt;/small&gt;<br/>
+     &lt;/div&gt;<br/>
+     &lt;hr class="transparent mx-3 my-0"&gt;&lt;!----&gt;<br/>
+     &lt;div class="callout callout-warning m-0 py-3"&gt;<br/>
+      &lt;div class="avatar float-right"&gt;<br/>
+       &lt;img alt="admin@f2x.com" class="img-avatar" src="assets/img/avatars/Manager-icon.png"&gt;<br/>
+      &lt;/div&gt;<br/>
+      &lt;div&gt;<br/>
+       &lt;a class="nav-link" routerlinkactive="active" style="color:black; padding-left:0px"&gt;Modulo de &lt;strong&gt;Administración&lt;/strong&gt;&lt;/a&gt;<br/>
+      &lt;/div&gt;&lt;small class="text-muted mr-3"&gt;Modulo de administración de usuarios, permisos y menús.&lt;/small&gt;<br/>
+     &lt;/div&gt;<br/>
+     &lt;hr class="mx-3 my-0"&gt;&lt;!----&gt;<br/>
+     &lt;div class="callout callout-info m-0 py-3"&gt;<br/>
+      &lt;div class="avatar float-right"&gt;<br/>
+       &lt;img alt="admin@f2x.com" class="img-avatar" src="assets/img/avatars/toll_icon.jpg"&gt;<br/>
+      &lt;/div&gt;<br/>
+      &lt;div&gt;<br/>
+       &lt;a class="nav-link" routerlinkactive="active" style="color:black; padding-left:0px;cursor:pointer"&gt;Modulo de &lt;strong&gt;Peajes&lt;/strong&gt;&lt;/a&gt;<br/>
+      &lt;/div&gt;&lt;small class="text-muted mr-3"&gt;Modulo de tráfico y recaudo de peajes.&lt;/small&gt;<br/>
+     &lt;/div&gt;<br/>
+     &lt;hr class="mx-3 my-0"&gt;&lt;!----&gt;<br/>
+    &lt;/aside&gt;<br/>
+   &lt;/div&gt;<br/>
+   &lt;footer class="app-footer"&gt;<br/>
+    &lt;a href="https://www.f2x.com.co/" rel="noopener noreferrer" target="_blank"&gt;F2X&lt;/a&gt; © 2017 Software Department. <br/>
+   &lt;/footer&gt;<br/>
+   &lt;basicmodal&gt;<br/>
+    &lt;div aria-hidden="true" aria-labelledby="myModalLabel" bsmodal="" class="modal fade" role="dialog" tabindex="-1"&gt;<br/>
+     &lt;div role="document" class="modal-dialog  modal-primary"&gt;<br/>
+      &lt;div class="modal-content"&gt;<br/>
+       &lt;div class="modal-header"&gt;<br/>
+        &lt;h4 class="modal-title"&gt;Cambio de clave&lt;/h4&gt;&lt;button aria-label="Close" class="close" type="button"&gt;&lt;span aria-hidden="true"&gt;×&lt;/span&gt;&lt;/button&gt;<br/>
+       &lt;/div&gt;<br/>
+       &lt;form novalidate class="ng-untouched ng-pristine ng-invalid"&gt;<br/>
+        &lt;div class="modal-body"&gt;<br/>
+         &lt;div class="form-group mt-3"&gt;<br/>
+          &lt;div class="input-group"&gt;<br/>
+           &lt;span class="input-group-addon"&gt;&lt;i class="icon-lock"&gt;&lt;/i&gt;&lt;/span&gt;<br/>
+           &lt;input class="form-control ng-untouched ng-pristine ng-invalid" maxlength="8" minlength="4" name="clave1" placeholder="Nueva clave" required type="password" pattern="[0-9]*"&gt;<br/>
+          &lt;/div&gt;&lt;!----&gt;<br/>
+         &lt;/div&gt;<br/>
+         &lt;div class="form-group"&gt;<br/>
+          &lt;div class="input-group"&gt;<br/>
+           &lt;span class="input-group-addon"&gt;&lt;i class="icon-lock"&gt;&lt;/i&gt;&lt;/span&gt;<br/>
+           &lt;input class="form-control ng-untouched ng-pristine ng-invalid" maxlength="8" minlength="4" name="clave2" placeholder="Confirmar clave" required type="password" pattern="[0-9]*"&gt;<br/>
+          &lt;/div&gt;&lt;!----&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/div&gt;<br/>
+        &lt;div class="modal-footer"&gt;<br/>
+         &lt;!----&gt;&lt;button class="btn btn-secondary" type="button"&gt;Cancelar&lt;/button&gt;&lt;button class="btn btn-primary" type="submit" disabled&gt;Cambiar Clave&lt;/button&gt;<br/>
+        &lt;/div&gt;<br/>
+       &lt;/form&gt;<br/>
+      &lt;/div&gt;<br/>
+     &lt;/div&gt;<br/>
+    &lt;/div&gt;<br/>
+   &lt;/basicmodal&gt;<br/>
+   &lt;basicmodal&gt;<br/>
+    &lt;div aria-hidden="true" aria-labelledby="myModalLabel" bsmodal="" class="modal fade" role="dialog" tabindex="-1"&gt;<br/>
+     &lt;div role="document" class="modal-dialog  modal-primary"&gt;<br/>
+      &lt;div class="modal-content"&gt;<br/>
+       &lt;div class="modal-header"&gt;<br/>
+        &lt;h4 class="modal-title"&gt;Cambio de empresa&lt;/h4&gt;&lt;button aria-label="Close" class="close" type="button"&gt;&lt;span aria-hidden="true"&gt;×&lt;/span&gt;&lt;/button&gt;<br/>
+       &lt;/div&gt;<br/>
+       &lt;form novalidate class="ng-untouched ng-pristine ng-invalid"&gt;<br/>
+        &lt;div class="modal-body"&gt;<br/>
+         &lt;div class="form-group"&gt;<br/>
+          &lt;div class="controls"&gt;<br/>
+           &lt;label class="form-control-label"&gt;Empresa Actual &lt;/label&gt;<br/>
+           &lt;input class="form-control ng-untouched ng-pristine" name="empActual" type="text" disabled&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+         &lt;div class="form-group"&gt;<br/>
+          &lt;div class="controls"&gt;<br/>
+           &lt;label class="form-control-label"&gt;Cambiar a la empresa: &lt;/label&gt;&lt;select class="form-control ng-untouched ng-pristine ng-invalid" name="select" required size="1"&gt;&lt;!----&gt;&lt;/select&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/div&gt;<br/>
+        &lt;div class="modal-footer"&gt;<br/>
+         &lt;!----&gt;&lt;button class="btn btn-secondary" type="button"&gt;Cancelar&lt;/button&gt;&lt;button class="btn btn-primary" type="submit" disabled&gt;Cambiar Entorno&lt;/button&gt;<br/>
+        &lt;/div&gt;<br/>
+       &lt;/form&gt;<br/>
+      &lt;/div&gt;<br/>
+     &lt;/div&gt;<br/>
+    &lt;/div&gt;<br/>
+   &lt;/basicmodal&gt;<br/>
+   &lt;mensajemodal&gt;<br/>
+    &lt;div aria-hidden="true" aria-labelledby="myModalLabel" bsmodal="" class="modal fade" role="dialog" tabindex="-1"&gt;<br/>
+     &lt;div role="document" class="modal-dialog modal-"&gt;<br/>
+      &lt;div class="modal-content"&gt;<br/>
+       &lt;div class="modal-header"&gt;<br/>
+        &lt;h4 class="modal-title"&gt;Respuesta&lt;/h4&gt;&lt;button aria-label="Close" class="close" type="button"&gt;&lt;span aria-hidden="true"&gt;×&lt;/span&gt;&lt;/button&gt;<br/>
+       &lt;/div&gt;<br/>
+       &lt;div class="modal-body"&gt;<br/>
+        &lt;span&gt;...&lt;/span&gt;<br/>
+       &lt;/div&gt;<br/>
+       &lt;div class="modal-footer"&gt;<br/>
+        &lt;button class="btn btn-secondary" type="button"&gt;Ok&lt;/button&gt;<br/>
+       &lt;/div&gt;<br/>
+      &lt;/div&gt;<br/>
+     &lt;/div&gt;<br/>
+    &lt;/div&gt;<br/>
+   &lt;/mensajemodal&gt;<br/>
+  &lt;/app-dashboard&gt; &lt;!--&lt;body&gt;<br/>
+  &lt;app-root&gt;&lt;/app-root&gt;<br/>
+&lt;/body&gt;--&gt; &lt;bs-modal-backdrop class="modal-backdrop fade in show"&gt;&lt;/bs-modal-backdrop&gt;<br/>
+ &lt;/body&gt;<br/>
+&lt;/html&gt;</code></pre></div></body></html>
