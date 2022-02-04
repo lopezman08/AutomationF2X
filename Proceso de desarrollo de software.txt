@@ -1,0 +1,9 @@
+Proceso de desarrollo de software
+
+El desarrollo del software esta dividido en varias fases, en las cuales se ejecutan diferentes procesos que al final llevan a obtener un software de calidad.
+
+Inicialmente se lleva a cabo un proceso de levantamiento de requerimientos, donde se consulta al cliente cuales son las necesidades que tiene y como podría estar estructurado el software a desarrollar, en esta etapa es importante generar un documento de requerimientos o una historia de usuario, donde se incluyen todas las funcionalidades requeridas por el cliente y a partir de este se definen las tareas que debe ejecutar cada uno de los roles del equipo de trabajo.
+
+Luego de que se han definido las tareas de cada rol del equipo, se inicia con el desarrollo del software mientras que en paralelo el equipo de pruebas debe estar diseñando su set de casos de prueba, para cuando se tenga listo el desarrollo se pueda iniciar la etapa de pruebas.
+
+Una vez se tiene listo el desarrollo y se han diseñado casos de prueba se inicia la etapa de implementación, aqui se despliega y entrega el software funcional al equipo de pruebas, se llevan a cabo la ejecucion de las pruebas requeridas (funcionales, carga, estres, etc) y se reportan los bugs encontrados durante las pruebas. Lo ideal es que a medida que se van encontrando bugs, estos sean reportados al equipo de desarrollo para que estos sean resueltos de manera oportuna, una vez son solucionados se realizan re test sobre los mismos. Luego de que se han terminado las pruebas y se ha garantizado que se han corregido los bugs encontrados se hace la entrega al cliente, quien debe realizar pruebas en su ambiente y garantizar que el software funciona de manera correcta, una vez finalizadas las pruebas en ambientes de pruebas del cliente se procede a realizar el despliegue en producción para que el usuario final pueda disfrutar del software desarrollado.
