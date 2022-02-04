@@ -1,6 +1,6 @@
 # AutomationF2X
 
-El código contiene dos escenarios de prueba con el fin de validar algunas de las funcionalidades para anular sesiones que se encuentran en la sección Sesiones del Módulo de Administración. Para ejecutar la automatizacion basta con abrir la clase Runner y seleccionar ejecutar con JUnit.
+El código contiene dos escenarios de prueba con el fin de validar algunas de las funcionalidades para anular sesiones que se encuentran en la sección Sesiones del Módulo de Administración. Para ejecutar la automatizacion basta con abrir la clase Runner y seleccionar ejecutar con JUnit. No es necesario descargar el ChromeDriver dado que la automatización se encarga de descargar el driver necesario para la ejecución de la prueba
 
 IMPORTANTE
 
